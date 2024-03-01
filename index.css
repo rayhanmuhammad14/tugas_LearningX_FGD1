@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav a{
+    text-decoration:none;
+    color: black;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li{
+    margin-left: 20px;
+}
+
+.nav ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content .content-about{
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-portofolio{
+    height: 90vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content-portofolio-content{
+    margin-top: 50px;
+    display: flex;
+}
+
+.content-portofolio-content .card{
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.content-contact{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-contact-icon{
+    display: flex;
+}
+
+.content-contact-icon img{
+    margin: 10px;
+    border: 1px solid rgb(97, 97, 97);
+}
+
+.footer{
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    background-color: rgb(18, 12, 54);
+    color: white;
+}
+
+.content-home{
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(24, 24, 24, 0.5), rgba(39, 39, 39, 0.5)), url('assets/backg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-home .type{
+    display: flex;
+    width: 330px;
+}
+
+.navbar-icon-toggle{
+    display: none;
+}
+
+#type{
+    margin-left: 6px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    *{
+        font-size: 95%;
+    }
+    .content-about{
+        flex-direction: column;
+    }
+
+    .content-about-desc{
+        text-align: center;
+    }
+    
+    .content-portofolio{
+        flex-direction: column;
+        height: 120vh;
+    }
+
+    .content-portofolio-content{
+        flex-direction: column;
+    }
+
+    .content-portofolio-content .card{
+        width: 70%;
+    }
+
+    .content-contact{
+        height: 70vh;
+    }
+
+    .footer{
+        font-size: 60%;
+    }
+
+    .navbar-icon-toggle span {
+        background-color: rgb(77, 66, 143);
+        display: block;
+        width: 25px;
+        height: 3px;
+        border-radius: 3px;
+    }
+
+    .navbar-icon-toggle{
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .navbar-icon-toggle input{
+        position: absolute;
+        width: 26px;
+        height: 25px;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+        background-color: rgb(18, 12, 54);
+        transform: translateX(100%);
+        transition: ease-in-out 0.5s;
+        color: white;
+    }
+
+    .nav ul li{
+        margin-bottom: 50px;
+        color: white;
+    }
+
+    .nav ul.slide{
+        transform: translateX(0);
+        transition: ease-in-out 0.5s;
+    }
+
+}
